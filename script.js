@@ -68,14 +68,14 @@ child.style.setProperty('--delay', `${i * 0.08}s`);
 });
 });
 
-// ===== Hero reveal on load =====
+
 window.addEventListener('DOMContentLoaded', () => {
 document.querySelectorAll('.reveal-up').forEach(el => {
 requestAnimationFrame(() => el.classList.add('in'));
 });
 });
 
-// ===== Terminal typing effect =====
+
 const typedLine = document.getElementById('typedLine');
 const lines = [
 'whoami',
@@ -124,7 +124,6 @@ setTimeout(typeLoop, 600);
 }
 }
 
-// ===== Contact form feedback (front-end only demo) =====
 const form = document.getElementById('contactForm');
 
 if(form){
