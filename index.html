@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prajwal Nepal </title>
-
+<title>Prajwal Nepal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
 <header>
-
 <nav>
-
-<div class="logo">
-Prajwal Nepal
-</div>
+<div class="logo">Prajwal<span>.</span>Nepal</div>
 
 <ul class="nav-links">
 <li><a href="#home">Home</a></li>
@@ -27,220 +27,168 @@ Prajwal Nepal
 <li><a href="#contact">Contact</a></li>
 </ul>
 
-<div class="menu-btn">
-☰
-</div>
-
+<div class="menu-btn" id="menuBtn">☰</div>
 </nav>
-
 </header>
 
 <section class="hero" id="home">
+<div class="hero-bg" aria-hidden="true">
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="grid-overlay"></div>
+</div>
 
 <div class="hero-text">
+<p class="eyebrow reveal-up">currently online</p>
 
-<h1>Hello, I'm <span>Prajwal Nepal</span></h1>
+<h1 class="reveal-up" style="--delay:0.1s">Hello, I'm <span>Prajwal Nepal</span></h1>
 
-<h2> A Student and  Technology Enthusiast</h2>
+<h2 class="reveal-up" style="--delay:0.2s">A Student and Technology Enthusiast</h2>
 
-<p>
+<div class="terminal reveal-up" style="--delay:0.3s">
+<div class="terminal-bar">
+<span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+<span class="terminal-title">prajwal@iims:~</span>
+</div>
+<div class="terminal-body">
+<span class="prompt">$</span> <span class="typed-line" id="typedLine"></span><span class="cursor-blink">|</span>
+</div>
+</div>
 
-I'm currently pursuing a Bachelor of Computer Science  at IIMS College .
-
+<p class="reveal-up" style="--delay:0.4s">
+I'm currently pursuing a Bachelor of Computer Science at IIMS College.
 My interests revolve around tech, cybersecurity, innovation, scalable systems, digital transformation,
 and designing technology that solves real-world challenges.
-
 I enjoy combining analytical thinking with creativity to design secure systems,
 improve workflows, and create intuitive user experiences. I continuously learn new
 technologies while exploring cybersecurity research and software design.
-
 Outside technology, I enjoy music production, songwriting, entrepreneurship and travel,
 which strengthen my creativity and communication skills.
 </p>
 
-<a href="#contact" class="btn">Contact Me</a>
-
+<a href="#contact" class="btn reveal-up" style="--delay:0.5s">Contact Me</a>
 </div>
 
+<div class="scroll-cue" aria-hidden="true"><span></span></div>
 </section>
 
 <section id="about">
+<p class="eyebrow reveal-on-scroll"> about</p>
+<h2 class="reveal-on-scroll">About Me</h2>
 
-<h2>About Me</h2>
-
-<p>
-I'm someone who enjoys turning ideas into meaningful digital experiences through technology, creativity, and continuous learning. I’m passionate about building solutions that are not only functional but also scalable, intuitive, and capable of making a positive impact. I enjoy exploring new technologies, solving complex problems, and finding better ways to create efficient and user-friendly systems.
-
-What drives me most is the opportunity to learn, improve, and challenge myself with every project. I believe the best solutions come from curiosity, collaboration, and a willingness to think differently. Whether I'm developing an application, designing a system, or experimenting with new tools, I always aim to create work that is thoughtful, practical, and reliable.
-
-Outside of technology, I enjoy music, songwriting, and storytelling. These creative interests have shaped the way I communicate, think, and approach challenges, allowing me to bring both logic and creativity into everything I do.
-
-I'm always excited to connect with people, learn from new experiences, and contribute to projects that create meaningful value. I believe technology is most powerful when it helps people, and that's the kind of work I aspire to be part of.
+<p class="reveal-on-scroll">
+I'm someone who enjoys turning ideas into meaningful digital experiences through technology, creativity, and continuous learning. I'm passionate about building solutions that are not only functional but also scalable, intuitive, and capable of making a positive impact. I enjoy exploring new technologies, solving complex problems, and finding better ways to create efficient and user-friendly systems.
 </p>
 
+<p class="reveal-on-scroll">
+What drives me most is the opportunity to learn, improve, and challenge myself with every project. I believe the best solutions come from curiosity, collaboration, and a willingness to think differently. Whether I'm developing an application, designing a system, or experimenting with new tools, I always aim to create work that is thoughtful, practical, and reliable.
+</p>
 
+<p class="reveal-on-scroll">
+Outside of technology, I enjoy music, songwriting, and storytelling. These creative interests have shaped the way I communicate, think, and approach challenges, allowing me to bring both logic and creativity into everything I do.
+</p>
 
+<p class="reveal-on-scroll">
+I'm always excited to connect with people, learn from new experiences, and contribute to projects that create meaningful value. I believe technology is most powerful when it helps people, and that's the kind of work I aspire to be part of.
+</p>
 </section>
 
 <section id="skills">
-
-<h2>Skills</h2>
+<p class="eyebrow reveal-on-scroll">toolkit</p>
+<h2 class="reveal-on-scroll">Skills</h2>
 
 <div class="skills-grid">
-
-<div class="card">Python</div>
-
-<div class="card">UI/UX</div>
-
-<div class="card">Kali Linux</div>
-
-<div class="card">API Testing</div>
-
-<div class="card">Manual Testing</div>
-    
-<div class="card">Mobile Application Designer</div>
-
+<div class="card reveal-on-scroll"><span class="card-icon">🐍</span>Python</div>
+<div class="card reveal-on-scroll"><span class="card-icon">🎨</span>UI/UX</div>
+<div class="card reveal-on-scroll"><span class="card-icon">🛡️</span>Kali Linux</div>
+<div class="card reveal-on-scroll"><span class="card-icon">🔌</span>API Testing</div>
+<div class="card reveal-on-scroll"><span class="card-icon">🧪</span>Manual Testing</div>
+<div class="card reveal-on-scroll"><span class="card-icon">📱</span>Mobile Application Designer</div>
 </div>
-
 </section>
 
 <section id="education">
+<p class="eyebrow reveal-on-scroll">background</p>
+<h2 class="reveal-on-scroll">Education</h2>
 
-<h2>Education</h2>
-
-<div class="edu-card">
-
-<h3>Bachelor of Computer Science </h3>
-
+<div class="edu-card reveal-on-scroll">
+<div class="edu-marker"></div>
+<h3>Bachelor of Computer Science</h3>
 <p>IIMS COLLEGE</p>
-
-<p>September 2023 – September 2027</p>
-
+<p class="edu-date">September 2023 – September 2027</p>
 </div>
-
 </section>
 
 <section id="projects">
+<p class="eyebrow reveal-on-scroll">selected work</p>
+<h2 class="reveal-on-scroll">Featured Projects</h2>
 
-<h2>Featured Projects</h2>
-
-<div class="project">
-
+<div class="project reveal-on-scroll">
+<span class="project-tag">Mobile App Design</span>
 <h3>HearHealth - Mobile Application Design</h3>
-
 <p>
-
 Designed a complete mobile application prototype using Figma following
 user-centered design principles. Developed interactive wireframes,
 user flows and high-fidelity interfaces for a scalable health-tech application.
-
 </p>
+<a href="https://figma.com/design/yb8ZIkwmnG2M5f4Yl8bL9f/HearHealth" target="_blank">View Figma Prototype →</a>
+</div>
 
-<a href="https://figma.com/design/yb8ZIkwmnG2M5f4Yl8bL9f/HearHealth"
-target="_blank">
-View Figma Prototype
-</a>
-<h4>SEWA HUB - Mobile Application Design</h4>
-<p> 
-    SewaHub is a digital service marketplace connecting verified professionals with customers
+<div class="project reveal-on-scroll">
+<span class="project-tag">Mobile App Design</span>
+<h3>SEWA HUB - Mobile Application Design</h3>
+<p>
+SewaHub is a digital service marketplace connecting verified professionals with customers
 requiring home, healthcare, maintenance, delivery, and professional services.
 The platform provides secure booking, scheduling, real-time tracking, digital payments,
 verified professionals, AI-assisted service recommendations, and enterprise-grade
-management.
-The long-term vision is to become Nepal's largest trusted home-service ecosystem
+management. The long-term vision is to become Nepal's largest trusted home-service ecosystem.
 </p>
-<a href="https://www.figma.com/design/YfzaMq01UZAOcC7o4d4Aan/Sewa-Hub?node-id=19-140&t=VQjz3PLmhYLZw42u-1" target="_blank">
-View Figma Prototype
-</a>    
+<a href="https://www.figma.com/design/YfzaMq01UZAOcC7o4d4Aan/Sewa-Hub?node-id=19-140&t=VQjz3PLmhYLZw42u-1" target="_blank">View Figma Prototype →</a>
 </div>
-
 </section>
 
 <section id="extra">
-
-<h2>Interests</h2>
+<p class="eyebrow reveal-on-scroll"> beyond code</p>
+<h2 class="reveal-on-scroll">Interests</h2>
 
 <div class="interest-grid">
-
-<div class="interest">
-Cybersecurity 
+<div class="interest reveal-on-scroll">Cybersecurity</div>
+<div class="interest reveal-on-scroll">Technology Innovation</div>
+<div class="interest reveal-on-scroll">Technology Research</div>
+<div class="interest reveal-on-scroll">Digital Innovation</div>
 </div>
-<div class="interest">
-Technology Innovation
-</div>
-<div class="interest">
-    Technology Research
-</div>
-<div class="interest">
-Digital Innovation
-</div>
-
-
 </section>
 
 <section id="contact">
-
-<h2>Contact</h2>
+<p class="eyebrow reveal-on-scroll">get in touch</p>
+<h2 class="reveal-on-scroll">Contact</h2>
 
 <div class="contact-container">
-
-<div class="contact-info">
-
+<div class="contact-info reveal-on-scroll">
 <p><strong>Email</strong><br>
-<a href="mailto:prazolnepal8@gmail.com">
-prazolnepal8@gmail.com
-</a>
-</p>
+<a href="mailto:prazolnepal8@gmail.com">prazolnepal8@gmail.com</a></p>
 
 <p><strong>Phone</strong><br>
-+977-9862152214/+977-9805675828
-</p>
++977-9862152214 / +977-9805675828</p>
 
 <p><strong>LinkedIn</strong><br>
-<a href="https://www.linkedin.com/in/prajwal-n-66ab571b1/" target="_blank">
-linkedin.com/in/prajwalnepal
-</a>
-</p>
-
+<a href="https://www.linkedin.com/in/prajwal-n-66ab571b1/" target="_blank">linkedin.com/in/prajwalnepal</a></p>
 </div>
 
-<form id="contactForm">
-
-<input
-type="text"
-placeholder="Your Name"
-required>
-
-<input
-type="email"
-placeholder="Email"
-required>
-
-<textarea
-placeholder="Message"
-required></textarea>
-
-<button type="submit">
-Send Message
-</button>
-
+<form id="contactForm" class="reveal-on-scroll">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Message" required></textarea>
+<button type="submit"><span>Send Message</span></button>
 </form>
-
 </div>
-
 </section>
 
 <footer>
-
-<p>
-
-© 2026 Prajwal Nepal
-
-</p>
-
+<p>© 2026 Prajwal Nepal</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
