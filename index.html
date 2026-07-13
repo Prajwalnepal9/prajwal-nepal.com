@@ -177,10 +177,12 @@ management. The long-term vision is to become Nepal's largest trusted home-servi
 </div>
 
 <form id="contactForm" class="reveal-on-scroll">
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Email" required>
-<textarea placeholder="Message" required></textarea>
+<input type="text" id="userName" name="user_name" placeholder="Your Name" required>
+<input type="email" id="userEmail" name="user_email" placeholder="Email" required>
+<textarea id="userMessage" name="message" placeholder="Message" required></textarea>
+<input type="text" name="botcheck" id="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
 <button type="submit"><span>Send Message</span></button>
+<p id="formStatus" class="form-status" aria-live="polite"></p>
 </form>
 </div>
 </section>
@@ -189,6 +191,7 @@ management. The long-term vision is to become Nepal's largest trusted home-servi
 <p>© 2026 Prajwal Nepal</p>
 </footer>
 
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
