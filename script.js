@@ -124,24 +124,79 @@ setTimeout(typeLoop, 600);
 }
 }
 
+// ===== Contact form: sends straight to prazolnepal8@gmail.com via EmailJS =====
+// Fill these in from your EmailJS dashboard (https://dashboard.emailjs.com):
+const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+
+if(window.emailjs && EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY'){
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+
 const form = document.getElementById('contactForm');
+const formStatus = document.getElementById('formStatus');
 
 if(form){
 form.addEventListener('submit', (e) => {
 e.preventDefault();
+
+// Honeypot: real visitors never fill this hidden field. If it's filled, it's a bot —
+// silently pretend success without actually sending anything.
+const botcheck = document.getElementById('botcheck');
+if(botcheck && botcheck.value){
+form.reset();
+return;
+}
+
 const btn = form.querySelector('button');
 const btnText = btn.querySelector('span');
 const original = btnText.textContent;
 
+btn.classList.remove('sent', 'error');
+btn.disabled = true;
+btnText.textContent = 'Sending...';
+if(formStatus){
+formStatus.textContent = '';
+formStatus.className = 'form-status';
+}
+
+const templateParams = {
+from_name: document.getElementById('userName').value,
+from_email: document.getElementById('userEmail').value,
+message: document.getElementById('userMessage').value
+};
+
+emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+.then(() => {
 btn.classList.add('sent');
 btnText.textContent = 'Message Sent ✓';
-btn.disabled = true;
+if(formStatus){
+formStatus.textContent = 'Thanks — I\'ll get back to you soon.';
+formStatus.className = 'form-status success';
+}
+form.reset();
 
 setTimeout(() => {
 btn.classList.remove('sent');
 btnText.textContent = original;
 btn.disabled = false;
-form.reset();
 }, 2400);
+})
+.catch((err) => {
+console.error('EmailJS error:', err);
+btn.classList.add('error');
+btnText.textContent = 'Failed — try again';
+if(formStatus){
+formStatus.textContent = 'Something went wrong. Please try again or email me directly.';
+formStatus.className = 'form-status error';
+}
+btn.disabled = false;
+
+setTimeout(() => {
+btn.classList.remove('error');
+btnText.textContent = original;
+}, 2800);
+});
 });
 }
