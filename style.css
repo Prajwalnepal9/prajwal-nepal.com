@@ -1,3 +1,4 @@
+
 :root{
 --bg:#0f172a;
 --bg-alt:#0b1223;
@@ -110,7 +111,6 @@ pointer-events:none;
 opacity:0.55;
 }
 
-
 header{
 position:fixed;
 width:100%;
@@ -194,6 +194,7 @@ transition:transform .2s, color .2s;
 .menu-btn:active{
 transform:scale(0.9);
 }
+
 
 .hero{
 position:relative;
@@ -403,6 +404,7 @@ box-shadow:0 12px 30px -8px rgba(56,189,248,0.5);
 transform:translateY(-1px);
 }
 
+
 .scroll-cue{
 position:absolute;
 bottom:34px;
@@ -489,6 +491,7 @@ margin-bottom:8px;
 section#about > h2 + p{
 margin-top:36px;
 }
+
 
 .reveal-up,
 .reveal-on-scroll{
@@ -809,7 +812,6 @@ background:#111827;
 color:var(--text-dim);
 font-size:14px;
 }
-
 
 @media(prefers-reduced-motion:reduce){
 *{
