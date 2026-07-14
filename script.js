@@ -16,6 +16,7 @@ menuBtn.textContent = '☰';
 });
 }
 
+
 const header = document.querySelector('header');
 const scrollProgress = document.getElementById('scrollProgress');
 const heroBg = document.querySelector('.hero-bg');
@@ -94,7 +95,7 @@ revealObserver.unobserve(entry.target);
 
 revealEls.forEach(el => revealObserver.observe(el));
 
-
+// Stagger cards/interests within the same grid slightly
 document.querySelectorAll('.skills-grid, .interest-grid').forEach(grid => {
 Array.from(grid.children).forEach((child, i) => {
 child.style.setProperty('--delay', `${i * 0.08}s`);
@@ -105,7 +106,7 @@ icon.style.setProperty('--float-delay', `${i * 0.22}s`);
 });
 });
 
-
+// ===== Hero reveal on load =====
 window.addEventListener('DOMContentLoaded', () => {
 splitHeroText();
 
@@ -204,7 +205,7 @@ setTimeout(typeLoop, 600);
 }
 }
 
-
+// ===== Contact form feedback (front-end only demo) =====
 const form = document.getElementById('contactForm');
 
 if(form){
@@ -252,7 +253,7 @@ p.addEventListener('animationend', () => p.remove());
 }
 }
 
-// ===== Ripple click effect =====
+
 function addRipple(el){
 el.addEventListener('click', (e) => {
 const rect = el.getBoundingClientRect();
@@ -269,7 +270,7 @@ ripple.addEventListener('animationend', () => ripple.remove());
 
 document.querySelectorAll('.btn, form button').forEach(addRipple);
 
-// ===== 3D tilt on cards (desktop only) =====
+
 if(!isTouch && !prefersReducedMotion){
 document.querySelectorAll('.card, .project, .interest, .edu-card').forEach(el => {
 el.addEventListener('mousemove', (e) => {
@@ -310,7 +311,6 @@ el.style.transform = 'translate(0,0)';
 });
 });
 }
-
 
 (function initParticleNetwork(){
 const canvas = document.getElementById('particles');
