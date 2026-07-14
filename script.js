@@ -16,7 +16,6 @@ menuBtn.textContent = '☰';
 });
 }
 
-
 const header = document.querySelector('header');
 const scrollProgress = document.getElementById('scrollProgress');
 const heroBg = document.querySelector('.hero-bg');
